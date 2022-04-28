@@ -1,0 +1,28 @@
+nav {
+    width: 100%;
+    background-color: $accent-color;
+
+    ul.container {
+        background-color: $accent-color;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1em 0;
+
+        li {
+            list-style: none;
+            color: $light-text;
+            @include smallcaps;
+            padding: 5px 0;
+            border-bottom: 1px solid $accent-color;
+            @include transition-ease;
+
+            &:hover,
+            &:focus {
+                @include link-hover(#fff);
+                border-bottom: 1px solid #fff;
+                @include transition-ease;
+
+        }
+    }
+
+}}

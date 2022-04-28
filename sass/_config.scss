@@ -1,1 +1,31 @@
-@import "config";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// colors
+
+$background-color: #fff;
+$accent-color: #1D543D;
+$sidebar-background: #F1F0F0;
+$font-color: #292929;
+$secondary-font-color: #9C9B9B;
+$light-text: #F9F8F8;
+
+@mixin smallcaps {
+    font-family: 'Lexend', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+@mixin link-hover($color) {
+    cursor: pointer;
+    color: $color;
+}
+
+@mixin transition-ease {
+    transition: all 400ms ease;
+}
+

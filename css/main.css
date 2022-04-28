@@ -1,1 +1,89 @@
-/* No CSS */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  background-color: #1D543D;
+}
+
+nav ul.container {
+  background-color: #1D543D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1em 0;
+}
+
+nav ul.container li {
+  list-style: none;
+  color: #F9F8F8;
+  font-family: 'Lexend', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 3px;
+  padding: 5px 0;
+  border-bottom: 1px solid #1D543D;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+nav ul.container li:hover, nav ul.container li:focus {
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.header-logo {
+  width: auto;
+  margin: 0 auto;
+  padding: 3em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-logo h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+.header-logo p.header-subtitle {
+  font-family: 'Besley', serif;
+  font-style: italic;
+  text-align: right;
+  color: #9C9B9B;
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  margin-top: -10px;
+}
+
+body {
+  background-color: #F9F8F8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5em;
+}

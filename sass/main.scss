@@ -1,0 +1,15 @@
+@import "config";
+@import "nav";
+@import "hero";
+
+body {
+    background-color: #F9F8F8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    background-color: #fff;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5em;
+}
