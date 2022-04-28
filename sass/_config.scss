@@ -13,10 +13,23 @@ $font-color: #292929;
 $secondary-font-color: #9C9B9B;
 $light-text: #F9F8F8;
 
+// fonts
+
+$caps: 'Lexend', sans-serif;
+$script: 'Besley', serif;
+
+$bs: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 @mixin smallcaps {
     font-family: 'Lexend', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
+    letter-spacing: 3px;
+}
+
+@mixin script-italic {
+    font-family: $script;
+    font-style: italic;
     letter-spacing: 3px;
 }
 

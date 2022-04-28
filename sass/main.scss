@@ -1,15 +1,60 @@
 @import "config";
 @import "nav";
 @import "hero";
+@import "img-tiles";
+@import "sidebar";
+@import "about-me";
+@import "article";
+@import "buttons";
+@import "search";
+@import "footer";
 
 body {
     background-color: #F9F8F8;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
 }
-.container {
-    background-color: #fff;
+
+.footer-container, .container {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    padding: 1.5em;
+    padding: 2em;
+}
+
+.container {
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h2, h4 {
+    @include smallcaps;
+    margin-top: 1em;
+}
+
+h3 {
+    font-family: $script;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+hr {
+    margin: 3em;
+    color: $accent-color;
+}
+
+section.article-section {
+    display: flex;
+    justify-content: space-between;
+
+    article {
+        width: 62%
+    }
+
+    aside {
+        width: 34%;
+    }
 }

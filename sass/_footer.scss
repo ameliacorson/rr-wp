@@ -1,0 +1,14 @@
+footer {
+  background: $accent-color;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: $script;
+
+    a {
+        color: rgba($light-text, .7);
+        text-decoration: none;
+    }
+  }
+}

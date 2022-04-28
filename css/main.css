@@ -23,7 +23,7 @@ nav ul.container {
 
 nav ul.container li {
   list-style: none;
-  color: #F9F8F8;
+  color: rgba(249, 248, 248, 0.85);
   font-family: 'Lexend', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
@@ -43,9 +43,6 @@ nav ul.container li:hover, nav ul.container li:focus {
 }
 
 .header-logo {
-  width: auto;
-  margin: 0 auto;
-  padding: 3em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,35 +52,259 @@ nav ul.container li:hover, nav ul.container li:focus {
           flex-direction: column;
 }
 
-.header-logo h1 {
-  font-size: 2.5rem;
-  text-align: center;
+.header-logo img {
+  width: 60%;
+  margin: 2em auto;
+}
+
+.img-tiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0 2em 0;
+  position: relative;
+}
+
+.img-tiles .img-tile {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.img-tiles .img-tile_img {
+  width: 100%;
+  height: width;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+  padding: .5em;
+}
+
+.img-tiles .img-tile p {
+  font-family: "Besley", serif;
+  font-style: italic;
+  letter-spacing: 3px;
+  position: absolute;
+  z-index: 5;
+  bottom: 40%;
+  background: #fff;
+  padding: 2px 30px;
+  width: auto;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.sidebar {
+  margin-bottom: 1.5em;
+  width: 100%;
+  background: #F1F0F0;
+}
+
+.sidebar img {
+  width: 100%;
+  height: 33%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sidebar-container {
+  padding: 1em;
+}
+
+.sidebar-container p {
+  font-size: .75rem;
+  margin: 1em 0;
+}
+
+.sidebar-container p.email-list_subtitle {
+  font-family: "Besley", serif;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-align: right;
+  margin-top: -10px;
+}
+
+.sidebar-container a {
+  color: #1D543D;
+  font-family: "Besley", serif;
+  text-decoration: none;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.sidebar-container a:hover, .sidebar-container a:focus {
+  color: rgba(29, 84, 61, 0.75);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+
+.sidebar-container .email-list_input {
+  width: 100%;
+  margin: 1.5em 0;
+  padding: 5px;
+  border: none;
+}
+
+.sidebar ul {
+  margin-top: 1.3em;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin-bottom: .8em;
+}
+
+.sidebar ul li a {
+  color: rgba(41, 41, 41, 0.8);
+  font-size: .75rem;
+  text-decoration: underline;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a:focus {
+  cursor: pointer;
+  color: #9C9B9B;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+section {
+  margin: 1em 0;
+}
+
+section article .article-img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 1em;
+}
+
+section article h3, section article p, section article button {
+  margin-top: 1em;
+}
+
+button {
+  width: 100%;
+  background-color: #1D543D;
   font-family: 'Lexend', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 3px;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 1em;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
-.header-logo p.header-subtitle {
-  font-family: 'Besley', serif;
-  font-style: italic;
-  text-align: right;
-  color: #9C9B9B;
-  font-size: 1.2em;
-  letter-spacing: 4px;
-  margin-top: -10px;
+button:hover {
+  background-color: rgba(29, 84, 61, 0.85);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+
+.search-bar {
+  border-bottom: 1px solid #F9F8F8;
+  margin: 1.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-bar input {
+  width: 100%;
+  margin: .5em 0;
+  padding: 5px;
+  border: none;
+}
+
+footer {
+  background: #1D543D;
+}
+
+footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Besley", serif;
+}
+
+footer .footer-container a {
+  color: rgba(249, 248, 248, 0.7);
+  text-decoration: none;
 }
 
 body {
   background-color: #F9F8F8;
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+}
+
+.footer-container, .container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em;
 }
 
 .container {
   background-color: #fff;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1.5em;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h2, h4 {
+  font-family: 'Lexend', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-top: 1em;
+}
+
+h3 {
+  font-family: "Besley", serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+hr {
+  margin: 3em;
+  color: #1D543D;
+}
+
+section.article-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.article-section article {
+  width: 62%;
+}
+
+section.article-section aside {
+  width: 34%;
 }

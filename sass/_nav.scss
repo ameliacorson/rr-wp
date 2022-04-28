@@ -10,7 +10,7 @@ nav {
 
         li {
             list-style: none;
-            color: $light-text;
+            color: rgba($light-text, .85);
             @include smallcaps;
             padding: 5px 0;
             border-bottom: 1px solid $accent-color;

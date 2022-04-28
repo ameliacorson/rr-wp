@@ -1,0 +1,33 @@
+.img-tiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0 2em 0;
+    position: relative;
+
+    .img-tile {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+
+        &_img {
+            width: 100%;
+            height: width;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            padding: .5em;
+        }
+
+        p {
+            @include script-italic;
+            position: absolute;
+            z-index: 5;
+            bottom: 40%;
+            background: $background-color;
+            padding: 2px 30px;
+            width: auto;
+            box-shadow: $bs;
+        }
+    }
+}
