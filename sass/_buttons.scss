@@ -3,9 +3,11 @@ button {
     background-color: $accent-color;
     @include smallcaps;
     color: rgba(#fff, .9);
+    box-shadow: $bs;
     border: none;
     padding: 1em;
     @include transition-ease;
+
 
     &:hover {
         background-color: rgba($accent-color, .85);
