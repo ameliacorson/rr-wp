@@ -14,19 +14,19 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 5em 0;
+    padding: 10em 0;
 
     li {
         list-style: none;
         text-align: right;
+        margin-top: 1em;
     }
 
      a {
       font-size: 1.5rem;
-      font-style: none;
+      padding: .5em;
       color: rgba($light-text, 0.85);
       @include smallcaps;
-      padding: 0.5em;
       @include transition-ease;
 
       &:hover,

@@ -1,10 +1,12 @@
 footer {
   background: $accent-color;
+  width: 100%;
 
   .footer-container {
     display: flex;
     justify-content: space-between;
     font-family: $script;
+    font-size: .75rem;
 
     a {
         color: rgba($light-text, .7);

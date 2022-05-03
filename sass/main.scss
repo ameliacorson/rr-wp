@@ -4,7 +4,7 @@
 @import "hero";
 @import "img-tiles";
 @import "sidebar";
-@import "about-me";
+@import "page";
 @import "article";
 @import "buttons";
 @import "search";
@@ -48,15 +48,15 @@ hr {
     color: $accent-color;
 }
 
-section.article-section {
-    display: flex;
-    justify-content: space-between;
+// section.article-section {
+//     display: flex;
+//     justify-content: space-between;
 
-    article {
-        width: 62%
-    }
+//     article {
+//         width: 62%
+//     }
 
-    aside {
-        width: 34%;
-    }
-}
+//     aside {
+//         width: 34%;
+//     }
+// }

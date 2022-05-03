@@ -45,23 +45,23 @@ nav ul.container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 5em 0;
+  padding: 10em 0;
 }
 
 nav ul.container li {
   list-style: none;
   text-align: right;
+  margin-top: 1em;
 }
 
 nav ul.container a {
   font-size: 1.5rem;
-  font-style: none;
+  padding: .5em;
   color: rgba(249, 248, 248, 0.85);
   font-family: "Lexend", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 3px;
-  padding: 0.5em;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
@@ -323,6 +323,11 @@ button.nav-toggle .hamburger::after {
   transition: all 400ms ease;
 }
 
+.page img {
+  width: 100%;
+  margin: 1em 0;
+}
+
 section {
   margin: 1em 0;
 }
@@ -379,6 +384,7 @@ section button:hover {
 
 footer {
   background: #1d543d;
+  width: 100%;
 }
 
 footer .footer-container {
@@ -389,6 +395,7 @@ footer .footer-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: "Besley", serif;
+  font-size: .75rem;
 }
 
 footer .footer-container a {
@@ -434,21 +441,4 @@ h3 {
 hr {
   margin: 3em;
   color: #1d543d;
-}
-
-section.article-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-section.article-section article {
-  width: 62%;
-}
-
-section.article-section aside {
-  width: 34%;
 }
