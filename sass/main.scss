@@ -1,4 +1,5 @@
 @import "config";
+@import "header";
 @import "nav";
 @import "hero";
 @import "img-tiles";
@@ -8,6 +9,7 @@
 @import "buttons";
 @import "search";
 @import "footer";
+
 
 body {
     background-color: #F9F8F8;

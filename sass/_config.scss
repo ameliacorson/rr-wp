@@ -4,41 +4,55 @@
   padding: 0;
 }
 
+//breakpoints
+
+$phone-breakpoint: 450px;
+$tablet-breakpoint: 650px;
+
 // colors
 
 $background-color: #fff;
-$accent-color: #1D543D;
-$sidebar-background: #F1F0F0;
+$accent-color: #1d543d;
+$sidebar-background: #f1f0f0;
 $font-color: #292929;
-$secondary-font-color: #9C9B9B;
-$light-text: #F9F8F8;
+$secondary-font-color: #9c9b9b;
+$light-text: #f9f8f8;
 
 // fonts
 
-$caps: 'Lexend', sans-serif;
-$script: 'Besley', serif;
+$caps: "Lexend", sans-serif;
+$script: "Besley", serif;
 
 $bs: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 @mixin smallcaps {
-    font-family: 'Lexend', sans-serif;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 3px;
+  font-family: "Lexend", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 3px;
 }
 
 @mixin script-italic {
-    font-family: $script;
-    font-style: italic;
-    letter-spacing: 3px;
+  font-family: $script;
+  font-style: italic;
+  letter-spacing: 3px;
 }
 
 @mixin link-hover($color) {
-    cursor: pointer;
-    color: $color;
+  cursor: pointer;
+  color: $color;
 }
 
 @mixin transition-ease {
-    transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
+@mixin hamburger-span {
+  content: "";
+  width: 33px;
+  height: 4px;
+  position: absolute;
+  background: $light-text;
+  border-radius: 7px;
+  @include transition-ease
+}

@@ -1,28 +1,104 @@
 nav {
-    width: 100%;
+  position: fixed;
+  background: $accent-color;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  z-index: 100;
+  transform: translateX(100%);
+  @include transition-ease;
+
+  ul.container {
     background-color: $accent-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5em 0;
 
-    ul.container {
-        background-color: $accent-color;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 1em 0;
-
-        li {
-            list-style: none;
-            color: rgba($light-text, .85);
-            @include smallcaps;
-            padding: 5px 0;
-            border-bottom: 1px solid $accent-color;
-            @include transition-ease;
-
-            &:hover,
-            &:focus {
-                @include link-hover(#fff);
-                border-bottom: 1px solid #fff;
-                @include transition-ease;
-
-        }
+    li {
+        list-style: none;
+        text-align: right;
     }
 
-}}
+     a {
+      font-size: 1.5rem;
+      font-style: none;
+      color: rgba($light-text, 0.85);
+      @include smallcaps;
+      padding: 0.5em;
+      @include transition-ease;
+
+      &:hover,
+      &:focus {
+        @include link-hover(#fff);
+        @include transition-ease;
+      }
+    }
+  }
+}
+
+button.nav-toggle {
+  width: 50px;
+  border-radius: 50%;
+  padding: 1em;
+  margin: 1.6em;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: $accent-color;
+
+  z-index: 2000;
+  transform: translateY(0px);
+  @include transition-ease;
+
+  .hamburger {
+    @include hamburger-span;
+
+    &::before {
+      @include hamburger-span;
+      left: 0;
+      top: -9px;
+    }
+
+    &::after {
+      @include hamburger-span;
+      left: 0;
+      top: 9px;
+    }
+  }
+}
+
+.nav-open {
+
+    nav {
+        transform: translateX(0%);
+        @include transition-ease;
+    }
+
+  button.nav-toggle {
+    transform: translateY(20px) scale(1.2);
+    @include transition-ease;
+
+    .hamburger {
+      background: transparent;
+      @include transition-ease;
+
+      &:before {
+        transform: rotate(45deg) translate(8px, 8px);
+        background: $background-color;
+        @include transition-ease;
+      }
+
+      &:after {
+        transform: rotate(135deg) translate(-4px, 5px);
+        background: $background-color;
+        @include transition-ease;
+      }
+    }
+  }
+
+
+}

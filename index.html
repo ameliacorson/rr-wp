@@ -11,12 +11,15 @@
 </head>
 <body>
     <header>
-        <nav>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav id="nav">
             <ul class="container">
-                <li>Home</li>
-                <li>About</li>
-                <li>Recipes</li>
-                <li>Contact</li>
+                <li class="nav-item"><a href="">Home</a></li>
+                <li class="nav-item"><a href="">About</a></li>
+                <li class="nav-item"><a href="">Recipes</a></li>
+                <li class="nav-item"><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -24,19 +27,20 @@
     <div class="header-logo">
         <img alt="Right Recipe blog logo" src="./img/logo-img.png"/>
     </div>
+
     <div class="img-tiles">
-        <div class="img-tile">
+        <a href=""><div class="img-tile">
             <img class="img-tile_img" src="./img/RR_cinnamon-scones.webp"/>
             <p class="img-tile_text" >explore</p>
-        </div>
-        <div class="img-tile">
+        </div></a>
+        <a href=""><div class="img-tile">
             <img class="img-tile_img" src="./img/RR_pumpkin-bread.webp"/>
-            <p class="img-tile_text">archive</p>
-        </div>
-        <div class="img-tile">
+            <p class="img-tile_text">archive</p> </div></a>
+       
+        <a href=""><div class="img-tile">
             <img class="img-tile_img" src="./img/RR_salad.webp"/>
             <p class="img-tile_text">instagram</p>
-        </div>
+        </div></a>
     </div>
 
     <hr>
@@ -135,6 +139,6 @@
         </div>
 
     </footer>
-    
+    <script src="index.js"></script>
 </body>
 </html>
