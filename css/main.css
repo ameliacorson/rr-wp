@@ -16,6 +16,7 @@ header {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  z-index: 2;
 }
 
 nav {
