@@ -1,11 +1,40 @@
-.header-logo {
-    margin-top: 100px;
+.hero-logo {
+    margin: 6em 0 3em 0;
+    height: 20vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
-    img {
-        width: 100%;
+    h1 {
+        @include smallcaps;
+        font-weight: 400;
+        font-size: 1.7em;
+        text-shadow: $ts;
+        color: $font-color
+    }
+
+    p.hero-subtitle {
+        @include script-italic;
+        text-align: right;
+        position: absolute;
+        right:0;
+        margin-right: 1.7em;
+        bottom: 3.3em;
+        color: $secondary-font-color;
+    }
+
+    &_img {
+        width:55%;
         margin: 0 auto;
+        opacity: 5%;
+        position: absolute;
+        transform: scaleX(-1) rotate(230deg) translateY(2em);
+    }
 
+    &_text {
+        width:100%;
+        margin: 0 auto;
     }
 }

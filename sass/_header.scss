@@ -4,10 +4,32 @@ header{
     background-color: $accent-color;
     position: fixed;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
+    align-items: center;
     z-index: 2;
 
-    input {
+    .header-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: .75em;
+        cursor: pointer;
+    
 
+        &_img {
+            height: 60%;
+            opacity: 20%;
+            margin-left: 1em;
+        }
+
+        &_text {
+            position: absolute;
+            font-family: $caps;
+            font-size: 2rem;
+            font-weight: 700;
+            color: $background-color;
+            margin-left: 1.5em;
+        }
     }
 }

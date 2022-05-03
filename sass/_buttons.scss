@@ -8,6 +8,10 @@ section button {
     padding: 1em;
     @include transition-ease;
 
+    &:first-of-type {
+        margin-bottom: 3em;
+    }
+
 
     &:hover {
         background-color: rgba($accent-color, .85);
