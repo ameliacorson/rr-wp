@@ -11,3 +11,9 @@
     }
 
 }
+
+@media (min-width: $column-bp) {
+    .search-bar {
+        display: flex;
+    }
+}

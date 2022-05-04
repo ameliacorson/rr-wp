@@ -37,3 +37,15 @@
     }
   }
 }
+
+@media (min-width: $tablet-bp) {
+  .img-tiles {
+    flex-direction: row;
+
+    .img-tile {
+      &_img {
+        height: 100%;
+      }
+    }
+  }
+}
