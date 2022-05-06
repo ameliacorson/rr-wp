@@ -6,7 +6,7 @@ section button {
     box-shadow: $bs;
     border: none;
     padding: 1em;
-    @include transition-ease;
+    @include transition-ease(all);
 
     &:first-of-type {
         margin-bottom: 3em;
@@ -15,7 +15,7 @@ section button {
 
     &:hover {
         background-color: rgba($accent-color, .85);
-        @include transition-ease;
+        @include transition-ease(all);
         cursor: pointer;
     }
 }

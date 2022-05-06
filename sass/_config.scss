@@ -8,7 +8,7 @@
 
 $phone-bp: 450px;
 $tablet-bp: 550px;
-$column-bp: 650px;
+$desktop-bp: 650px;
 
 // colors
 
@@ -45,8 +45,8 @@ $ts: 1px 1px 2px rgba(0,0,0,0.3);
   color: $color;
 }
 
-@mixin transition-ease {
-  transition: all 400ms ease;
+@mixin transition-ease($factor) {
+  transition: $factor 400ms ease;
 }
 
 @mixin hamburger-span {
@@ -56,5 +56,5 @@ $ts: 1px 1px 2px rgba(0,0,0,0.3);
   position: absolute;
   background: $light-text;
   border-radius: 7px;
-  @include transition-ease
+  @include transition-ease(all)
 }

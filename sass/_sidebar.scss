@@ -33,12 +33,12 @@
             color: $accent-color;
             font-family: $script;
             text-decoration: none;
-            @include transition-ease;
+            @include transition-ease(all);
 
             &:hover,
             &:focus {
                 color: rgba($accent-color, .75);
-                @include transition-ease;
+                @include transition-ease(all);
                 cursor: pointer;
             }
 
@@ -64,12 +64,12 @@
                 color: rgba($font-color, .8);
                 font-size: .75rem;
                 text-decoration: underline;
-                @include transition-ease;
+                @include transition-ease(all);
 
                 &:hover,
                 &:focus {
                     @include link-hover($secondary-font-color);
-                    @include transition-ease;
+                    @include transition-ease(all);
                 }
             }
         }
@@ -96,7 +96,7 @@
     }
 }
 
-@media (min-width: $column-bp) {
+@media (min-width: $desktop-bp) {
     .sidebar {
         .sidebar-container.about-me {
             flex-direction: column;

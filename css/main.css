@@ -19,11 +19,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
+  z-index: 100;
 }
 
 header .header-logo {
   height: 100%;
+  opacity: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +36,8 @@ header .header-logo {
           justify-content: center;
   margin-left: .75em;
   cursor: pointer;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 header .header-logo_img {
@@ -52,22 +55,30 @@ header .header-logo_text {
   margin-left: 1.5em;
 }
 
+@media (min-width: 650px) {
+  header .header-logo {
+    opacity: 0;
+    -webkit-transition: all 400ms ease;
+    transition: all 400ms ease;
+  }
+}
+
 nav {
   position: fixed;
   background: #1d543d;
-  top: 0;
+  top: 70px;
   bottom: 0;
-  left: 50%;
+  left: 0;
   right: 0;
-  z-index: 100;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  z-index: 1;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
 
 nav ul.container {
-  background-color: #1d543d;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,30 +89,34 @@ nav ul.container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 10em 0;
+  padding: 3em 0;
 }
 
 nav ul.container li {
   list-style: none;
-  text-align: right;
-  margin-top: 1em;
+  text-align: center;
+  margin-top: 2.5em;
 }
 
 nav ul.container a {
   font-size: 1.5rem;
-  padding: .5em;
   color: rgba(249, 248, 248, 0.85);
+  text-decoration: none;
+  border-bottom: 1px solid #1d543d;
   font-family: "Lexend", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 3px;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
+  -webkit-transition: color 400ms ease;
+  transition: color 400ms ease;
+  -webkit-transition: border-bottom 400ms ease;
+  transition: border-bottom 400ms ease;
 }
 
 nav ul.container a:hover, nav ul.container a:focus {
   cursor: pointer;
   color: #fff;
+  border-bottom: 1px solid white;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
@@ -123,6 +138,7 @@ button.nav-toggle {
           justify-content: center;
   position: relative;
   background-color: #1d543d;
+  cursor: pointer;
   z-index: 2000;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -168,8 +184,8 @@ button.nav-toggle .hamburger::after {
 }
 
 .nav-open nav {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
@@ -201,6 +217,37 @@ button.nav-toggle .hamburger::after {
   background: #fff;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
+}
+
+@media (min-width: 650px) {
+  nav {
+    height: 70px;
+    background-color: rgba(29, 84, 61, 0);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  nav ul.container {
+    background-color: rgba(29, 84, 61, 0);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+    margin-top: 1.25em;
+    height: 30px;
+  }
+  nav ul.container li {
+    margin: 0;
+    height: 30px;
+  }
+  nav ul.container a {
+    font-size: .75rem;
+    font-weight: 300;
+  }
+  button.nav-toggle {
+    display: none;
+    padding: 1em;
+  }
 }
 
 .hero-logo {
@@ -451,6 +498,14 @@ section article .article-img {
 
 section article h3, section article p, section article button {
   margin-top: 1em;
+}
+
+.article-header img {
+  width: 100%;
+}
+
+.article-header h3 {
+  margin: 1em 0;
 }
 
 section button {

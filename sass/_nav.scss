@@ -1,38 +1,41 @@
 nav {
   position: fixed;
   background: $accent-color;
-  top: 0;
+  top: 70px;
   bottom: 0;
-  left: 50%;
+  left: 0;
   right: 0;
-  z-index: 100;
-  transform: translateX(100%);
-  @include transition-ease;
+  z-index: 1;
+  transform: translateY(-150%);
+  @include transition-ease(all);
 
   ul.container {
-    background-color: $accent-color;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 10em 0;
+    padding: 3em 0;
 
     li {
         list-style: none;
-        text-align: right;
-        margin-top: 1em;
+        text-align: center;
+        margin-top: 2.5em;
     }
 
      a {
       font-size: 1.5rem;
-      padding: .5em;
       color: rgba($light-text, 0.85);
+      text-decoration: none;
+      border-bottom: 1px solid $accent-color;
       @include smallcaps;
-      @include transition-ease;
+      @include transition-ease(color);
+      @include transition-ease(border-bottom);
 
       &:hover,
       &:focus {
         @include link-hover(#fff);
-        @include transition-ease;
+        border-bottom: 1px solid white;
+        @include transition-ease(all);
       }
     }
   }
@@ -49,10 +52,11 @@ button.nav-toggle {
   justify-content: center;
   position: relative;
   background-color: $accent-color;
+  cursor: pointer;
 
   z-index: 2000;
   transform: translateY(0px);
-  @include transition-ease;
+  @include transition-ease(all);
 
   .hamburger {
     @include hamburger-span;
@@ -74,31 +78,63 @@ button.nav-toggle {
 .nav-open {
 
     nav {
-        transform: translateX(0%);
-        @include transition-ease;
+        transform: translateY(0%);
+        @include transition-ease(all);
     }
 
   button.nav-toggle {
     transform: translateY(20px) scale(1.2);
-    @include transition-ease;
+    @include transition-ease(all);
 
     .hamburger {
       background: transparent;
-      @include transition-ease;
+      @include transition-ease(all);
 
       &:before {
         transform: rotate(45deg) translate(8px, 8px);
         background: $background-color;
-        @include transition-ease;
+        @include transition-ease(all);
       }
 
       &:after {
         transform: rotate(135deg) translate(-4px, 5px);
         background: $background-color;
-        @include transition-ease;
+        @include transition-ease (all);
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-bp) {
+  nav {
+    height: 70px;
+    background-color: rgba($accent-color, 0);
+    transform: translateY(-100%);
+    
+
+    ul.container {
+      background-color: rgba($accent-color, 0);
+      flex-direction: row;
+      padding:0;
+      margin-top: 1.25em;
+      height: 30px;
+
+      li {
+        margin:0;
+        height: 30px;
+
+      }
+
+      a {
+        font-size: .75rem;
+        font-weight: 300;
       }
     }
   }
 
-
+  button.nav-toggle {
+    display: none;
+    padding: 1em;
+  }
 }
+

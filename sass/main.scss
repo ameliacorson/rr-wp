@@ -48,7 +48,7 @@ hr {
     color: $accent-color;
 }
 
-@media (min-width: $column-bp) {
+@media (min-width: $desktop-bp) {
 section.article-section {
     display: flex;
     justify-content: space-between;

@@ -5,16 +5,19 @@ header{
     position: fixed;
     display: flex;
     justify-content: space-between;
+
     align-items: center;
-    z-index: 2;
+    z-index: 100;
 
     .header-logo {
         height: 100%;
+        opacity: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-left: .75em;
         cursor: pointer;
+        @include transition-ease(all);
     
 
         &_img {
@@ -31,5 +34,12 @@ header{
             color: $background-color;
             margin-left: 1.5em;
         }
+    }
+}
+
+@media (min-width: $desktop-bp) {
+    header .header-logo {
+        opacity: 0;
+        @include transition-ease(all);
     }
 }
